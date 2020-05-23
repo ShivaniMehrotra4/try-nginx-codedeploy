@@ -1,0 +1,26 @@
+version: 1.0
+os: linux
+
+# files:
+#   - source: /index.html
+#     destination: /var/www/html/
+
+hooks:
+
+  BeforeInstall:
+
+    - location: dependency-install
+      runas: root
+      timeout: 200
+
+    - runas: root
+      location: start-nginx
+      timeout: 200
+      
+
+  ApplicationStop:
+
+    - runas: root
+      location: stop-nginx
+      timeout: 200
+      
