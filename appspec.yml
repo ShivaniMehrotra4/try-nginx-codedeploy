@@ -6,7 +6,7 @@ os: linux
 #     destination: /var/www/html/
 
 hooks:
-
+  
   BeforeInstall:
 
     - location: dependency-install
