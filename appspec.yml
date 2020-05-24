@@ -11,16 +11,16 @@ hooks:
 
     - location: dependency-install
       runas: root
-      timeout: 200
+      timeout: 300
 
     - runas: root
       location: start-nginx
-      timeout: 200
+      timeout: 300
       
 
   ApplicationStop:
 
     - runas: root
       location: stop-nginx
-      timeout: 200
+      timeout: 300
       
