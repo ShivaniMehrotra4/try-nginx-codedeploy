@@ -6,20 +6,15 @@ os: linux
 #     destination: /var/www/html/
 
 hooks:
-
     BeforeInstall:
-
     - location: dependency-install
       runas: root
       timeout: 300
-
     - runas: root
       location: start-nginx
       timeout: 300
-      
 
-  ApplicationStop:
-
+    ApplicationStop:
     - runas: root
       location: stop-nginx
       timeout: 300
